@@ -1,0 +1,50 @@
+---
+title: "Chicken Weight"
+author: "Ebtesam"
+date:   "9/28/2021"
+output: 'rmdformats::readthedown'
+
+---
+**This is a test for R Markdown file kitted to an HTML file.** 
+
+## ***Table***
+
+ **ChickWeight Dataset** 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r cols.print=3, rows.print=3, echo=FALSE}
+DT::datatable(ChickWeight, 
+         extensions = c('FixedColumns',"FixedHeader"),
+          options = list(scrollX = TRUE, 
+                         paging=TRUE,
+                         fixedHeader=TRUE))
+```
+
+
+
+
+## ***Summary***
+
+- find the Mean
+- Standard Daviation
+- Min and Max
+- Median
+
+```{r }
+summary(ChickWeight)
+```
+
+
+## ***Plot***
+
+```{r , echo=FALSE}
+
+plot.default(ChickWeight$Time,ChickWeight$Weight,xlab='weight',ylab='time',main='A plot of weight over time',type='l',xlim=c(0,300))
+```
+
+
