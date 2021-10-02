@@ -1,5 +1,5 @@
 # RMarkdown  
-This is for knitted R Scripts:
+This is for knitted R Scripts files:
 
 # Irrigation Dataset  
 -First we need to understand the dataset (Discussing the dataset).  
